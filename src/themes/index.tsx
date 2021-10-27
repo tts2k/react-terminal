@@ -7,11 +7,11 @@ import materialOceanTheme from "./material-ocean";
 import matrixTheme from "./matrix";
 
 export default {
-	"dark": darkTheme,
-	"light": lightTheme,
-	"dracula": draculaTheme,
-	"material-dark": materialDarkTheme,
-	"material-light": materialLightTheme,
-	"material-ocean": materialOceanTheme,
-	"matrix": matrixTheme
+  dark: darkTheme,
+  light: lightTheme,
+  dracula: draculaTheme,
+  "material-dark": materialDarkTheme,
+  "material-light": materialLightTheme,
+  "material-ocean": materialOceanTheme,
+  matrix: matrixTheme,
 };

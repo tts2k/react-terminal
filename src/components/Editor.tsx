@@ -3,10 +3,7 @@ import * as React from "react";
 import { StyleContext } from "../contexts/StyleContext";
 import { ThemeContext } from "../contexts/ThemeContext";
 import { TerminalContext } from "../contexts/TerminalContext";
-import {
-  useCurrentLine,
-  useScrollToBottom,
-} from "../hooks/editor";
+import { useCurrentLine, useScrollToBottom } from "../hooks/editor";
 
 export default function Editor(props: any) {
   const wrapperRef = React.useRef(null);
@@ -24,7 +21,7 @@ export default function Editor(props: any) {
     commands,
     welcomeMessage,
     errorMessage,
-    curvedTop
+    curvedTop,
   } = props;
 
   const currentLine = useCurrentLine(
@@ -32,12 +29,22 @@ export default function Editor(props: any) {
     consoleFocused,
     prompt,
     commands,
-    errorMessage, 
-    enableInput
+    errorMessage,
+    enableInput,
   );
 
   return (
-    <div ref={wrapperRef} className={`${style.editor} ${curvedTop ? style.curvedTop : null}`} style={{ background: themeStyles.themeBGColor }}>
+    <div
+      ref={wrapperRef}
+      className={`${style.editor} ${curvedTop ? style.curvedTop : null}`}
+      style={{
+        background: themeStyles.themeBGColor,
+        fontFamily: themeStyles.themeFontFamily,
+        fontSize: themeStyles.themeFontSize,
+        lineHeight: themeStyles.themeLineHeight,
+        padding: themeStyles.themePadding ?? "10px 15px",
+      }}
+    >
       {welcomeMessage}
       {bufferedContent}
       {currentLine}
