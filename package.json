@@ -8,7 +8,8 @@
   "scripts": {
     "build": "./node_modules/.bin/cross-env NODE_ENV=production rollup -c",
     "watch": "rollup -cw",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "yarn run build"
   },
   "files": [
     "dist",
@@ -58,6 +59,7 @@
     "npm-install-peers": "^1.2.1",
     "react-test-renderer": "^16.12.0",
     "rollup": "^1.27.14",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-terser": "^5.1.3",
     "rollup-plugin-typescript2": "^0.25.3",
