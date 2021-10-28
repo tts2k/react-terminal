@@ -1,12 +1,12 @@
 {
   "name": "@marijoo/react-terminal",
-  "version": "v1.2.1",
+  "version": "1.3.0",
   "description": "React component that renders a terminal",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "./node_modules/.bin/cross-env NODE_ENV=production rollup -c",
+    "build": "cross-env NODE_ENV=production rollup -c",
     "watch": "rollup -cw",
     "prepublish": "npm run build"
   },
