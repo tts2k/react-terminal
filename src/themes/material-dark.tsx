@@ -1,10 +1,10 @@
 export default {
-  themeBGColor: "#151515",
+  background: "#151515",
   themeToolbarColor: "#424242",
-  themeColor: "#fff",
-  themePromptColor: "#42A5F5",
-  themeFontFamily: "'Source Code Pro', monospace",
-  themeFontSize: "18px",
-  themeLineHeight: "22px",
-  themePadding: "10px 15px",
+  color: "#fff",
+  promptColor: "#42A5F5",
+  fontFamily: "monospace",
+  fontSize: "18px",
+  lineHeight: "1.5",
+  padding: "1em",
 };

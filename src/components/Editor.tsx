@@ -21,7 +21,6 @@ export default function Editor(props: any) {
     commands,
     welcomeMessage,
     errorMessage,
-    curvedTop,
   } = props;
 
   const currentLine = useCurrentLine(
@@ -36,13 +35,13 @@ export default function Editor(props: any) {
   return (
     <div
       ref={wrapperRef}
-      className={`${style.editor} ${curvedTop ? style.curvedTop : null}`}
+      className={`${style.editor}`}
       style={{
-        background: themeStyles.themeBGColor,
-        fontFamily: themeStyles.themeFontFamily,
-        fontSize: themeStyles.themeFontSize,
-        lineHeight: themeStyles.themeLineHeight,
-        padding: themeStyles.themePadding ?? "10px 15px",
+        background: themeStyles.background,
+        fontFamily: themeStyles.fontFamily,
+        fontSize: themeStyles.fontSize,
+        lineHeight: themeStyles.lineHeight,
+        padding: themeStyles.padding ?? "1em",
       }}
     >
       {welcomeMessage}
