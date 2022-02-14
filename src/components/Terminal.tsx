@@ -24,7 +24,12 @@ export default function Terminal(props: any) {
     welcomeMessage,
     errorMessage,
     enableInput,
+    onFocusChange,
   } = props;
+  
+  React.useEffect(() => {
+    onFocusChange()
+  }, [consoleFocused])
 
   const editor = (
     <Editor
@@ -70,6 +75,7 @@ Terminal.propTypes = {
     PropTypes.node,
   ]),
   errorMessage: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  onFocusChange: PropTypes.func
 };
 
 Terminal.defaultProps = {
@@ -80,4 +86,5 @@ Terminal.defaultProps = {
   commands: {},
   welcomeMessage: "",
   errorMessage: "Command not found.",
+  onFocusChange: () => {}
 };
