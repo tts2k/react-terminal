@@ -4,6 +4,12 @@
   overflow-wrap: break-word;
   overflow-y: scroll;
   outline: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none
+  }
 
   .mobileInput {
     position: absolute;
