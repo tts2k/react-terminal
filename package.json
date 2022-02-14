@@ -1,5 +1,5 @@
 {
-  "name": "@marijoo/react-terminal",
+  "name": "@tts2k/react-terminal",
   "version": "1.4.0",
   "description": "React component that renders a terminal",
   "main": "dist/index.js",
